@@ -24,7 +24,7 @@ class Ui_Main(object):
         Main.setMaximumSize(QtCore.QSize(585, 627))
         Main.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
         Main.setAcceptDrops(True)
-        Main.setWindowOpacity(0.9)
+        Main.setWindowOpacity(0.97)
         self.centralwidget = QtWidgets.QWidget(Main)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)

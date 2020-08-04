@@ -1,17 +1,17 @@
-from PyQt5 import QtWidgets
-from ui import Ui_Main
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+import gui
 import sys
-
-
-class mywindow(QtWidgets.QMainWindow):
+class Example(QMainWindow, gui.Ui_Main):
     def __init__(self):
-        super(mywindow, self).__init__()
-        self.ui = Ui_Main()
-        self.ui.setupUi(self)
-
-
-app = QtWidgets.QApplication([])
-application = mywindow()
-application.show()
-
-sys.exit(app.exec())
+        super().__init__()
+        self.setupUi(self)
+        self.pushButton.clicked.connect(self.buttonClicked)
+    def buttonClicked(self):
+        print('There will be magically created with the help of a 🐼 and 🐍 ')
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    form = Example()
+    form.show()
+    app.exec()
