@@ -20,6 +20,8 @@ class Ui_Main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Main.sizePolicy().hasHeightForWidth())
         Main.setSizePolicy(sizePolicy)
+        Main.setMinimumSize(QtCore.QSize(585, 627))
+        Main.setMaximumSize(QtCore.QSize(585, 627))
         Main.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
         Main.setAcceptDrops(True)
         self.centralwidget = QtWidgets.QWidget(Main)
@@ -68,7 +70,7 @@ class Ui_Main(object):
 
     def retranslateUi(self, Main):
         _translate = QtCore.QCoreApplication.translate
-        Main.setWindowTitle(_translate("Main", "Book Analyse v.0.01 a"))
+        Main.setWindowTitle(_translate("Main", "Book Analyse v.0.01 Alpha"))
         self.pushButton.setText(_translate("Main", "Analyse"))
         self.toolButton.setText(_translate("Main", "Save top words"))
         self.label.setText(_translate("Main", "Result of analyse \"filename\" :"))
